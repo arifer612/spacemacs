@@ -539,7 +539,12 @@
             ;; Emacs GC which truncages the undo history very aggresively
             undo-limit 800000
             undo-strong-limit 12000000
-            undo-outer-limit 120000000)
+            undo-outer-limit 120000000
+            undo-tree-history-directory-alist (list
+                                               (cons
+                                                "." (file-name-as-directory
+                                                     (concat spacemacs-cache-directory
+                                                             "undo-tree")))))
       (global-undo-tree-mode))
     :config
     (progn
