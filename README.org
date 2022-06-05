@@ -1,12 +1,41 @@
-#+TITLE: Spacemacs
 
-#+ATTR_HTML: :alt Made with Spacemacs
-[[SpaceDev][file:assets/spacemacs-badge.svg]]
-#+ATTR_HTML: :alt GPLv3 Software
-#+ATTR_HTML: :width 70 :height 28
-[[GPLv3][file:assets/gplv3.png]]
-#+ATTR_HTML: :alt Twitter
-[[SpacemacsTwitter][https://i.imgur.com/tXSoThF.png]]
+#+HTML: <a name="top" id="fork-destination-box"></a>
+#+HTML: <a href="https://develop.spacemacs.org"><img src="assets/spacemacs-badge.svg" alt="Made with Spacemacs"></a>
+#+HTML: <a href="https://www.gnu.org/licenses/gpl-3.0.en.html"><img src="assets/gplv3.png" alt="GPLv3 Software" align="right" width="70" height="28"></a>
+#+HTML: <a href="https://www.twitter.com/spacemacs"><img src="https://i.imgur.com/tXSoThF.png" alt="Twitter" align="right"></a>
+#+HTML: <br>
+
+-----
+
+#+HTML: <p align="center"><img src="/doc/img/title2.png" alt="Spacemacs"/></p>
+#+HTML: <p align="center">
+#+HTML: <b><a href="https://develop.spacemacs.org/doc/DOCUMENTATION#core-pillars">philosophy</a></b>
+#+HTML: |
+#+HTML: <b><a href="https://develop.spacemacs.org/doc/DOCUMENTATION#who-can-benefit-from-this">for whom?</a></b>
+#+HTML: |
+#+HTML: <b><a href="https://develop.spacemacs.org/doc/DOCUMENTATION#screenshots">screenshots</a></b>
+#+HTML: |
+#+HTML: <b><a href="https://develop.spacemacs.org/doc/DOCUMENTATION.html">documentation</a></b>
+#+HTML: |
+#+HTML: <b><a href="CONTRIBUTING.org">contribute</a></b>
+#+HTML: |
+#+HTML: <b><a href="https://develop.spacemacs.org/doc/DOCUMENTATION#achievements">achievements</a></b>
+#+HTML: |
+#+HTML: <b><a href="https://develop.spacemacs.org/doc/FAQ">FAQ</a></b>
+#+HTML: </p>
+
+-----
+
+#+HTML: <p align="center">
+#+HTML: <a href="https://gitter.im/syl20bnr/spacemacs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge"><img src="https://badges.gitter.im/Join Chat.svg" alt="Gitter"></a>
+#+HTML: <a href="https://discord.gg/p4MddFu6Ag"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg" alt="Discord"></a>
+#+HTML: <a href="https://github.com/syl20bnr/spacemacs/actions/workflows/elisp_test.yml"><img src="https://github.com/syl20bnr/spacemacs/actions/workflows/elisp_test.yml/badge.svg?branch=develop"></a>
+#+HTML: <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ESFVNPKP4Y742"><img src="https://img.shields.io/badge/Paypal-Donate-blue.svg" alt="Donate"></a>
+#+HTML: <a href="https://shop.spreadshirt.com/spacemacs-shop"><img src="https://img.shields.io/badge/Shop-T--Shirts-blue.svg" alt="Donate"></a>
+#+HTML: <a href="https://www.slant.co/topics/12/~what-are-the-best-programming-text-editors"><img src="https://img.shields.io/badge/Slant-Recommend-ff69b4.svg" alt="Recommend it"></a>
+#+HTML: </p>
+
+-----
 
 
 *Quick Install*
@@ -15,6 +44,7 @@ This assumes you don't have an existing Emacs setup and want to run Spacemacs as
 your config. If you do have one, look at the [[#install][full installation instructions]] for
 other options.
 
+- Linux / MacOS:
 #+begin_example shell
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 #+end_example
