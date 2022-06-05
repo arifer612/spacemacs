@@ -63,6 +63,21 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 - [[#introduction][Introduction]]
 - [[#features][Features]]
 - [[#documentation][Documentation]]
+- [[#getting-help][Getting Help]]
+- [[#prerequisites][Prerequisites]]
+  - [[#emacs][Emacs]]
+    - [[#linux-distros][Linux distros]]
+    - [[#macos][macOS]]
+      - [[#install-emacs][Install emacs]]
+        - [[#using-emacs-plus][Using emacs-plus]]
+        - [[#using-emacs-mac][Using emacs-mac]]
+        - [[#using-cask][Using cask]]
+        - [[#other-ways][Other ways]]
+      - [[#install-source-code-pro-font][Install Source Code Pro font]]
+      - [[#install-spacemacs][Install Spacemacs]]
+    - [[#windows][Windows]]
+      - [[#install-spacemacs-in-windows][Install Spacemacs in Windows]]
+      - [[#notes][Notes]]
 
 * Introduction
 Spacemacs is a new way of experiencing Emacs -- it's a sophisticated and
@@ -100,11 +115,232 @@ Comprehensive documentation is available for each layer by pressing SPC h SPC.
 
 You can also check the [[SpaceDevDocs][general documentation]], [[SpaceDevGuide][quick start guide]] and the [[SpaceDevFAQ][FAQ]].
 
-#+LINK: SpaceDev https://develop.spacemacs.org
-#+LINK: GPLv3 https://www.gnu.org/licenses/gpl-3.0.en.html
-#+LINK: SpaceTwitter https://www.twitter.com/spacemacs
-#+LINK: TwitterIcon https://i.imgur.com/tXSoThF.png
+* Getting Help
+If you need help, ask your question in the [[SpacemacsGitter][Gitter Chat]] and a member of the
+community will help you out.
+
+If you prefer IRC, connect to the [[IRCGitter][Gitter Chat IRC server]] and join the
+=#syl20bnr/spacemacs= channel.
+
+Last but not least there are a lot of high class tutorials available on
+YouTube:
+- Jack of Some's Spacemacs related channel [[JackOfSomeYouTube][here]]
+- GDQuest's Game Design oriented tutorials to Spacemacs [[GDQuestYouTube][here]]
+- Practicalli's Clojure tutorials based on Spacemacs [[PracticalliYouTube][here]]
+- Eivind Fonn's classic Spacemacs ABC: [[EivindFonnYouTube][here]]
+
+* Prerequisites
+Spacemacs is an extension of a popular text editor called Emacs. Thus
+you need to first install base Emacs and then download the Spacemacs
+extension files with Git.
+
+** Emacs
+Spacemacs requires Emacs 27.1 or above. The development version of Emacs
+is not /officially/ supported, but it should nevertheless be expected to
+work.
+
+Some modes require third-party tools that you'll have to install via
+your favorite package manager.
+
+*** Linux distros
+Install the =emacs= package with your linux distributions package
+manager.
+
+Do not install the =xemacs= package. It's not supported by Spacemacs.
+XEmacs is an old fork of Emacs. The X in its name is unrelated to X11.
+
+Emacs has graphical support.
+
+*Note:*
+
+Some linux distributions support only Emacs versions older than 27.1. In this
+case you should [[BuildFromSourceManual][build from source]] instead.
+
+*** macOS
+**** Install emacs
+***** Using emacs-plus
+#+begin_example brew
+brew tap d12frosted/emacs-plus
+
+# to install Emacs 27
+brew install emacs-plus@27 --with-spacemacs-icon
+# or to install Emacs 28
+brew install emacs-plus@28 --with-spacemacs-icon
+
+brew link emacs-plus
+#+end_example
+
+***** Using emacs-mac
+#+begin_example brew
+brew tap railwaycat/emacsmacport
+brew install emacs-mac
+brew link emacs-mac
+#+end_example
+
+***** Using cask
+Homebrew now recommends to use the cask version with the following message:
+"Please try the Cask for a better-supported Cocoa version". To install the cask
+version:
+
+#+begin_example
+brew install --cask emacs
+#+end_example
+
+This installs a pre-built package from https://emacsformacosx.com/
+
+***** Other ways
+If you're not comfortable with the ways mentioned above, then [[MacosxInstallEmacs][EmacsWiki]] lists
+down a few ways to install Emacs for macOS.
+
+**** Install Source Code Pro font
+Once Emacs is installed, run the following commands in the terminal to
+install the default Source Code Pro font:
+
+#+begin_example
+brew tap homebrew/cask-fonts
+brew install --cask font-source-code-pro
+#+end_example
+
+**** Install Spacemacs
+#+begin_example
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+#+end_example
+
+*Notes:*
+
+It's also recommended to add the [[SpaceDevLayersOSX][osx layer]] to your [[SpaceDevDotfile][dotfile]] after completing the
+Spacemacs [[#install][install process]]. Instructions on how to do so are available in the
+documentation for the [[SpaceDevLayersOSX][osx layer]].
+
+Depending on the installed version of GnuTLS, securely installing emacs
+packages may fail. In this case, it is possible to install using
+=emacs --insecure=. However, be aware that this means your packages will
+be transferred using http, use at your own risk.
+
+You may also have some issues when searching for your projects. It is
+recommended to install the GNU [[RipgrepHomebrew][ripgrep]] through homebrew:
+
+#+begin_example
+brew install ripgrep
+#+end_example
+
+*** Windows
+Download the official 64-bit (x86_64) stable builds from the [[WindowsInstallEmacs][GNU FTP]].
+
+You'll also need =gzip= and put it in your path. Download it from the [[WindowsInstallGzip][GNUWin32
+project page]]
+
+**** Install Spacemacs in Windows
+By default, Emacs looks for the =.emacs.d= directory in:
+=C:\Users\<username>\AppData\Roaming=
+
+- Clone Spacemacs to the Roaming directory:
+
+  - Windows Command Prompt:
+
+    #+begin_example
+    git clone https://github.com/syl20bnr/spacemacs %appdata%/.emacs.d
+    #+end_example
+
+  - Windows PowerShell prompt:
+
+    #+begin_example
+    git clone https://github.com/syl20bnr/spacemacs $env:appdata/.emacs.d
+    #+end_example
+
+- Or if a =HOME= environment variable has been configured that points to
+  your user directory: =C:\Users\<username>=
+
+  Clone Spacemacs to the =<username>= directory:
+
+  - Windows Command Prompt:
+
+    #+begin_example
+    git clone https://github.com/syl20bnr/spacemacs %homepath%/.emacs.d
+    #+end_example
+
+  - Windows PowerShell prompt:
+
+    #+begin_example
+    git clone https://github.com/syl20bnr/spacemacs $home/.emacs.d
+    #+end_example
+
+**** Notes
+- If the following error occurs after starting Emacs:
+
+  #+begin_example
+  The directory ~/.emacs.d/server is unsafe
+  #+end_example
+
+  Fix it by changing the owner of the directory =~/.emacs.d/server=:
+
+  - From Properties select the Tab "Security",
+  - Select the button "Advanced",
+  - Select the Tab "Owner"
+  - Change the owner to your account name
+
+  Source: [[WindowsEmacsServerError][Stack Overflow]]
+
+- For efficient searches, we recommend installing [[RipgrepGithub][ripgrep]].
+
+- Depending on the installed version of GnuTLS, securely installing
+  emacs packages may fail. In this case it is possible to install using
+  =emacs --insecure=. However be aware that this means your packages
+  will be transferred using http, use at your own risk.
+
+- The period (dot) before a file or folder name means that it's a hidden
+  file or folder. To show hidden files and folders:
+
+  - Press the Windows key
+  - Type =File explorer options=
+  - Select the =View= tab at the top
+  - Check =Show hidden files, folders and drives=
+  - Click =OK=
+
 #+LINK: SpaceDevCons https://develop.spacemacs.org/doc/CONVENTIONS
 #+LINK: SpaceDevDocs https://develop.spacemacs.org/doc/DOCUMENTATION
 #+LINK: SpaceDevGuide https://develop.spacemacs.org/doc/QUICK_START
 #+LINK: SpaceDevFAQ https://develop.spacemacs.org/doc/FAQ
+#+LINK: SpacemacsGitter https://gitter.im/syl20bnr/spacemacs
+
+#+LINK: IRCGitter https://irc.gitter.im/
+
+#+LINK: JackOfSomeYouTube https://www.youtube.com/watch?v=r-BHx7VNX5s&list=PLd_Oyt6lAQ8Rxb0HUnGbRrn6R4Cdt2yoI
+#+LINK: GDQuestYouTube https://www.youtube.com/watch?v=hCNOB5jjtmc&list=PLhqJJNjsQ7KFkMVBunWWzFD8SlH714qm4
+#+LINK: PracticalliYouTube https://www.youtube.com/watch?v=ZKuQDrQLAnc&list=PLpr9V-R8ZxiCHMl2_dn1Fovcd34Oz45su
+#+LINK: EivindFonnYouTube https://www.youtube.com/watch?v=ZFV5EqpZ6_s&list=PLrJ2YN5y27KLhd3yNs2dR8_inqtEiEweE
+
+#+LINK:  BuildFromSourceManual https://www.gnu.org/software/emacs/manual/html_node/efaq/Installing-Emacs.html
+#+LINK: MacosxInstallEmacs https://www.emacswiki.org/emacs/EmacsForMacOS#toc12
+#+LINK: SpaceDevLayersOSX https://develop.spacemacs.org/layers/+os/osx/README.html
+#+LINK: SpaceDevDotfile https://develop.spacemacs.org/doc/DOCUMENTATION#dotfile-configuration
+#+LINK: RipgrepHomebrew https://formulae.brew.sh/formula/ripgrep
+
+#+LINK: WindowsInstallEmacs https://ftp.gnu.org/gnu/emacs/windows/
+#+LINK: WindowsInstallGzip http://gnuwin32.sourceforge.net/packages/gzip.htm
+#+LINK: WindowsEmacsServerError https://stackoverflow.com/questions/885793/emacs-error-when-calling-server-start
+#+LINK: RipgrepGithub https://github.com/BurntSushi/ripgrep
+
+#+LINK: GitDownload https://git-scm.com/downloads
+#+LINK: SourceCodeProGithub https://github.com/adobe-fonts/source-code-pro
+#+LINK: QuelpaBytecompWarning https://github.com/quelpa/quelpa/issues/90#issuecomment-137982713
+#+LINK: DevelopFAQ https://develop.spacemacs.org/doc/FAQ
+#+LINK: linux-spacemacs-desktop-file https://github.com/emacs-mirror/emacs/blob/master/etc/emacs.desktop
+#+LINK: SpacemacsLogoIcon https://github.com/nashamri/spacemacs-logo
+#+LINK: MacosxChangeIcon https://www.idownloadblog.com/2014/07/16/how-to-change-app-icon-mac/
+#+LINK: SpacemacsGithubTags https://github.com/syl20bnr/spacemacs/tags
+#+LINK: AshnurQuote https://gitter.im/syl20bnr/spacemacs?at=568e627a0cdaaa62045a7df6
+#+LINK: AshnurGithub https://github.com/ashnur
+#+LINK: DeuillQuote https://gitter.im/syl20bnr/spacemacs?at=5768456c6577f032450cfedb
+#+LINK: DeuillGithub https://github.com/deuill
+#+LINK: StackExchangeEmacs https://emacs.stackexchange.com/questions/tagged/spacemacs
+#+LINK: SpacemacsReddit https://www.reddit.com/r/spacemacs
+#+LINK: IntellimacsGithub https://github.com/MarcoIeni/intellimacs
+#+LINK: SpaceclipseGithub https://github.com/MarcoIeni/spaceclipse
+#+LINK: SpacevimGithub https://github.com/SpaceVim/SpaceVim
+#+LINK: VspacecodeGithub https://github.com/VSpaceCode/VSpaceCode
+#+LINK: SpacemacsLogo https://github.com/nashamri/spacemacs-logo
+#+LINK: NashamriGithub https://github.com/nashamri
+#+LINK: CreativeCommons4 https://creativecommons.org/licenses/by-sa/4.0/
+#+LINK: SpacemacsShop https://shop.spreadshirt.com/spacemacs-shop
+#+LINK: SpacemacsBountysource https://salt.bountysource.com/teams/spacemacs
