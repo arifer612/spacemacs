@@ -1,6 +1,12 @@
 #+TITLE: Spacemacs
 
-#+LINK: spacemacs-convention https://develop.spacemacs.org/doc/CONVENTIONS
+#+ATTR_HTML: :style float:left;
+[[SpaceDev][file:assets/spacemacs-badge.svg]]
+#+ATTR_HTML: :style float:right;
+[[GPLv3][file:assets/gplv3.png]]
+#+ATTR_HTML: :style float:right;
+[[SpacemacsTwitter][TwitterIcon]]
+
 
 *Quick Install*
 
@@ -22,6 +28,10 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
   git clone https://github.com/syl20bnr/spacemacs $env:appdata/.emacs.d
 #+end_example
 
+*Table of Contents* :TOC_5_gh:noexport:
+- [[#features][Features]]
+- [[#documentation][Documentation]]
+
 * Introduction
 Spacemacs is a new way of experiencing Emacs -- it's a sophisticated and
 polished set-up, focused on ergonomics, mnemonics and consistency.
@@ -40,6 +50,7 @@ Spacemacs is currently in beta, and any contributions are very welcome.
 [[file:doc/img/spacemacs-python.png]]
 
 * Features
+
 - *Great documentation:* access the Spacemacs documentation with SPC h
   SPC.
 - *Beautiful GUI:* you'll love the distraction free UI and its
@@ -50,5 +61,18 @@ Spacemacs is currently in beta, and any contributions are very welcome.
   for all the buffer commands or SPC p for the project commands.
 - *Batteries included:* discover hundreds of ready-to-use packages
   nicely organised in configuration layers following a set of
-  [[spacemacs-conventions][conventions]].
+  [[SpacemacsConventions][conventions]].
 
+* Documentation
+Comprehensive documentation is available for each layer by pressing SPC h SPC.
+
+You can also check the [[SpaceDevDocs][general documentation]], [[SpaceDevGuide][quick start guide]] and the [[SpaceDevFAQ][FAQ]].
+
+#+LINK: SpaceDev https://develop.spacemacs.org
+#+LINK: GPLv3 https://www.gnu.org/licenses/gpl-3.0.en.html
+#+LINK: SpaceTwitter https://www.twitter.com/spacemacs
+#+LINK: TwitterIcon https://i.imgur.com/tXSoThF.png
+#+LINK: SpaceDevCons https://develop.spacemacs.org/doc/CONVENTIONS
+#+LINK: SpaceDevDocs https://develop.spacemacs.org/doc/DOCUMENTATION
+#+LINK: SpaceDevGuide https://develop.spacemacs.org/doc/QUICK_START
+#+LINK: SpaceDevFAQ https://develop.spacemacs.org/doc/FAQ
