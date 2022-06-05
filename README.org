@@ -3,10 +3,9 @@
 #+ATTR_HTML: :alt Made with Spacemacs
 [[SpaceDev][file:assets/spacemacs-badge.svg]]
 #+ATTR_HTML: :alt GPLv3 Software
-#+ATTR_HTML: :align right :width 70 :height 28
+#+ATTR_HTML: :width 70 :height 28
 [[GPLv3][file:assets/gplv3.png]]
 #+ATTR_HTML: :alt Twitter
-#+ATTR_HTML: :align right
 [[SpacemacsTwitter][https://i.imgur.com/tXSoThF.png]]
 
 
