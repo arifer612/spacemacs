@@ -59,7 +59,8 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
   git clone https://github.com/syl20bnr/spacemacs $env:appdata/.emacs.d
 #+end_example
 
-*Table of Contents* :TOC_5_gh:noexport:
+***** *Table of Contents*                               :TOC_5_gh:noexport:
+- [[#introduction][Introduction]]
 - [[#features][Features]]
 - [[#documentation][Documentation]]
 
