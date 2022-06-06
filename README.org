@@ -499,18 +499,18 @@ convenient keybinding ~SPC f e U~ *
 * Quotes
 [[AshnurQuote][Quote]] by [[AshnurGithub][ashnur]]:
 
-#+BEGIN_QUOTE
+#+BEGIN_EXAMPLE
 «I feel that spacemacs is an aircraft carrier and I am playing table tennis
 on the deck as a freerider.»
-#+END_QUOTE
+#+END_EXAMPLE
 
 [[DeuillQuote][Quote]] by [[DeuillGithub][deuill]]:
 
-#+BEGIN_QUOTE
+#+BEGIN_EXAMPLE
 «I LOVE SPACEMACS AND MAGIT
 
  That is all»
-#+END_QUOTE
+#+END_EXAMPLE
 
 * Contributions
 Spacemacs is a community-driven project, it needs /you/ to keep it up to
