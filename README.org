@@ -331,7 +331,7 @@ By default, Emacs looks for the =.emacs.d= directory in:
 
 2. Clone the repository with [[GitDownload][Git]]:
 
-   *Note: Windows users*, see [[*Install Spacemacs in Windows][Windows section]].
+   *Note: Windows users*, see [[#install-spacemacs-in-windows][Windows section]].
 
 #+BEGIN_EXAMPLE shell
    git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
@@ -355,7 +355,7 @@ By default, Emacs looks for the =.emacs.d= directory in:
    - macOS: /Arial Unicode MS/
    - Windows: /MS Gothic/ or /Lucida Sans Unicode/
 
-   If the mode-line doesn't look similar to the [[*Introduction][picture at the top of this page]],
+   If the mode-line doesn't look similar to the [[#introduction][picture at the top of this page]],
    make sure you have the correct fallback font installed.
 
    If you're running in a terminal, then you'll also need to change the
