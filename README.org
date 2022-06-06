@@ -78,6 +78,12 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
     - [[#windows][Windows]]
       - [[#install-spacemacs-in-windows][Install Spacemacs in Windows]]
       - [[#notes][Notes]]
+- [[#install][Install]]
+  - [[#default-installation][Default installation]]
+  - [[#alternative-installations][Alternative installations]]
+    - [[#modify-home-environment-variable][Modify HOME environment variable]]
+    - [[#modify-spacemacs-start-directory-variable][Modify spacemacs-start-directory variable]]
+  - [[#spacemacs-logo][Spacemacs logo]]
 
 * Introduction
 Spacemacs is a new way of experiencing Emacs -- it's a sophisticated and
@@ -108,7 +114,7 @@ Spacemacs is currently in beta, and any contributions are very welcome.
   for all the buffer commands or SPC p for the project commands.
 - *Batteries included:* discover hundreds of ready-to-use packages
   nicely organised in configuration layers following a set of
-  [[SpacemacsConventions][conventions]].
+  [[SpaceDevCons][conventions]].
 
 * Documentation
 Comprehensive documentation is available for each layer by pressing SPC h SPC.
@@ -297,6 +303,131 @@ By default, Emacs looks for the =.emacs.d= directory in:
   - Check =Show hidden files, folders and drives=
   - Click =OK=
 
+* Install
+** Default installation
+1. If you have an existing Emacs configuration, back it up first by
+   running the following code in your terminal:
+
+   #+begin_example
+   cd ~
+   mv .emacs.d .emacs.d.bak
+   mv .emacs .emacs.bak
+   #+end_example
+
+   Don't forget to backup and /remove/ the =~/.emacs= file. Otherwise
+   Spacemacs *WILL NOT* be able to load. This is because that file will
+   prevent Emacs from loading the proper initialization file.
+
+2. Clone the repository with [[GitDownload][Git]]:
+
+   *Note: Windows users*, see [[*Install Spacemacs in Windows][Windows section]].
+
+   #+begin_example
+   git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+   #+end_example
+
+   Or in case you have a limited internet connection or speed,
+
+   #+begin_example
+   git clone --depth 1 https://github.com/syl20bnr/spacemacs ~/.emacs.d
+   #+end_example
+
+3. (Optional) Install the default fonts
+
+   It's recommended to install [[SourceCodeProGithub][Source Code Pro]] by Adobe as the default font. It
+   ensures that, for example, the symbols on the mode-line (bottom bar) looks
+   correct. It's also recommended to use a "Fallback font". These depend on the
+   system:
+
+   - GNU/Linux: /NanumGothic/ (package named /fonts-nanum/ on Debian,
+     for example)
+   - macOS: /Arial Unicode MS/
+   - Windows: /MS Gothic/ or /Lucida Sans Unicode/
+
+   If the mode-line doesn't look similar to the [[*Introduction][picture at the top of this page]],
+   make sure you have the correct fallback font installed.
+
+   If you're running in a terminal, then you'll also need to change the
+   terminal's font settings.
+
+4. Launch Emacs. Spacemacs will automatically install the packages it
+   requires.
+
+5. Once the packages are installed, answer the questions in the Dotfile
+   wizard installer. If you are new to Emacs and Spacemacs, then it's
+   fine to just accept the default choices. It's easy to try the other
+   choices later, without having to reinstall Spacemacs. They can be
+   changed in the dotfile =~/.spacemacs= .
+
+6. After answering the questions, Spacemacs will download and install
+   the remaining packages it will require. When the all the packages
+   have been installed, restart Emacs to complete the installation.
+
+*Notes:* If you are behind a firewall or similar and you get an error
+regarding package downloads then you may try to disable the HTTPS
+protocol by starting Emacs with
+
+#+begin_example
+emacs --insecure
+#+end_example
+
+but this should be a last resort because of the security implications.
+
+You can set the =dotspacemacs-elpa-https= variable to =nil= in your
+dotfile =~/.spacemacs= but this has the same security implications as
+the insecure flag. You may also want to clear out your =.emacs.d/elpa=
+directory before doing this, so that any corrupted packages you may have
+downloaded will be re-installed.
+
+=error: Package 'package-build-' is unavailable= may occur due to heavy
+network taffic. You can fix it by setting the
+=dotspacemacs-elpa-timeout= variable to =70= in your dotfile.
+
+=Warning (bytecomp)= and other compilation warnings are perfectly normal. If
+you're curious, you can find out why these occur [[QuelpaBytecompWarning][here]].
+
+If the mode-line turns red, then be sure to consult the [[SpaceDevFAQ][FAQ]].
+
+** Alternative installations
+Currently, there are two supported locations for you to place your
+Spacemacs configuration files.
+
+*** Modify HOME environment variable
+This solution is ideal for quickly trying Spacemacs without compromising
+your existing configuration. Clone Spacemacs outside the Emacs
+dotdirectory =~/.emacs.d= and modify the HOME environment variable.
+
+#+begin_example shell
+mkdir ~/spacemacs
+git clone https://github.com/syl20bnr/spacemacs.git ~/spacemacs/.emacs.d
+HOME=~/spacemacs emacs
+#+end_example
+
+*Note*: If you're using the Fish shell, then you'll need to modify the
+last command to: =env HOME=$HOME/spacemacs emacs=
+
+*** Modify spacemacs-start-directory variable
+This solution is better suited to "embed" Spacemacs into your own
+configuration. If you've cloned Spacemacs into =~/.emacs.d/spacemacs/=,
+then drop the following lines in the =~/.emacs.d/init.el= file:
+
+#+begin_example elisp
+(setq spacemacs-start-directory "~/.emacs.d/spacemacs/")
+(load-file (concat spacemacs-start-directory "init.el"))
+#+end_example
+
+** Spacemacs logo
+For Linux users, create =spacemacs.desktop= in =~/.local/share/applications/=
+using [[LinuxSpacemacsDesktopFile][this .desktop file]] as a reference. Change the =Name= parameter to
+=Name=Spacemacs= and the =Icon= parameter to
+=Icon=/PATH/TO/EMACSD/core/banners/img/spacemacs.png= where =PATH/TO/EMACSD= is
+the path to your =.emacs.d= directory, usually =~/.emacs.d= or
+=~/.config/emacs=.
+
+For macOS users, you need to [[SpacemacsLogoIcon][download the .icns version of the logo]] and simply
+[[MacosxChangeIcon][change the logo on the Dock]].
+
+
 #+LINK: SpaceDevCons https://develop.spacemacs.org/doc/CONVENTIONS
 #+LINK: SpaceDevDocs https://develop.spacemacs.org/doc/DOCUMENTATION
 #+LINK: SpaceDevGuide https://develop.spacemacs.org/doc/QUICK_START
@@ -324,10 +455,11 @@ By default, Emacs looks for the =.emacs.d= directory in:
 #+LINK: GitDownload https://git-scm.com/downloads
 #+LINK: SourceCodeProGithub https://github.com/adobe-fonts/source-code-pro
 #+LINK: QuelpaBytecompWarning https://github.com/quelpa/quelpa/issues/90#issuecomment-137982713
-#+LINK: DevelopFAQ https://develop.spacemacs.org/doc/FAQ
-#+LINK: linux-spacemacs-desktop-file https://github.com/emacs-mirror/emacs/blob/master/etc/emacs.desktop
+
+#+LINK: LinuxSpacemacsDesktopFile https://github.com/emacs-mirror/emacs/blob/master/etc/emacs.desktop
 #+LINK: SpacemacsLogoIcon https://github.com/nashamri/spacemacs-logo
 #+LINK: MacosxChangeIcon https://www.idownloadblog.com/2014/07/16/how-to-change-app-icon-mac/
+
 #+LINK: SpacemacsGithubTags https://github.com/syl20bnr/spacemacs/tags
 #+LINK: AshnurQuote https://gitter.im/syl20bnr/spacemacs?at=568e627a0cdaaa62045a7df6
 #+LINK: AshnurGithub https://github.com/ashnur
