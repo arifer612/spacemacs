@@ -38,7 +38,7 @@
 -----
 
 
-**** *Quick Install* :noexport:
+**** *Quick Install*                                              :noexport:
 
 This assumes you don't have an existing Emacs setup and want to run Spacemacs as
 your config. If you do have one, look at the [[#install][full installation instructions]] for
@@ -59,7 +59,7 @@ git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
   git clone https://github.com/syl20bnr/spacemacs $env:appdata/.emacs.d
 #+END_EXAMPLE
 
-**** *Table of Contents*                               :TOC_5_gh:noexport:
+**** *Table of Contents*                                 :TOC_5_gh:noexport:
 - [[#introduction][Introduction]]
 - [[#features][Features]]
 - [[#documentation][Documentation]]
