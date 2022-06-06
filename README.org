@@ -174,19 +174,19 @@ case you should [[BuildFromSourceManual][build from source]] instead.
 #+BEGIN_EXAMPLE shell
   brew tap d12frosted/emacs-plus
 
-# to install Emacs 27
-brew install emacs-plus@27 --with-spacemacs-icon
-# or to install Emacs 28
-brew install emacs-plus@28 --with-spacemacs-icon
+  # to install Emacs 27
+  brew install emacs-plus@27 --with-spacemacs-icon
+  # or to install Emacs 28
+  brew install emacs-plus@28 --with-spacemacs-icon
 
-brew link emacs-plus
+  brew link emacs-plus
 #+END_EXAMPLE
 
 ***** Using emacs-mac
 #+BEGIN_EXAMPLE shell
-brew tap railwaycat/emacsmacport
-brew install emacs-mac
-brew link emacs-mac
+  brew tap railwaycat/emacsmacport
+  brew install emacs-mac
+  brew link emacs-mac
 #+END_EXAMPLE
 
 ***** Using cask
@@ -195,7 +195,7 @@ Homebrew now recommends to use the cask version with the following message:
 version:
 
 #+BEGIN_EXAMPLE shell
-brew install --cask emacs
+  brew install --cask emacs
 #+END_EXAMPLE
 
 This installs a pre-built package from https://emacsformacosx.com/
@@ -374,7 +374,7 @@ package downloads then you may try to disable the HTTPS protocol by starting
 Emacs with
 
 #+BEGIN_EXAMPLE shell
-emacs --insecure
+  emacs --insecure
 #+END_EXAMPLE
 
 but this should be a last resort because of the security implications.
@@ -470,8 +470,8 @@ your shell. Make sure to also replace the text: "tag version which you are
 updating to" with a tagged version. This page lists the [[SpacemacsGithubTags][latest tags]]
 
 #+BEGIN_EXAMPLE shell
-git fetch
-git reset --hard <tag version which you are updating to>
+  git fetch
+  git reset --hard <tag version which you are updating to>
 #+END_EXAMPLE
 
 ** Revert to a specific version (on master branch)
@@ -479,7 +479,7 @@ To revert to a specific version, just checkout the corresponding branch. For
 instance, the following command reverts Spacemacs to version =0.200=:
 
 #+BEGIN_EXAMPLE shell
-git checkout origin/release-0.200
+  git checkout origin/release-0.200
 #+END_EXAMPLE
 
 *After updating Spacemacs (either manually or automatically), you should also
@@ -491,16 +491,16 @@ the convenient keybinding ~SPC f e U~ *
 [[AshnurQuote][Quote]] by [[AshnurGithub][ashnur]]:
 
 #+BEGIN_EXAMPLE
-«I feel that spacemacs is an aircraft carrier and I am playing table tennis
-on the deck as a freerider.»
+  «I feel that spacemacs is an aircraft carrier and I am playing table tennis
+  on the deck as a freerider.»
 #+END_EXAMPLE
 
 [[DeuillQuote][Quote]] by [[DeuillGithub][deuill]]:
 
 #+BEGIN_EXAMPLE
-«I LOVE SPACEMACS AND MAGIT
+  «I LOVE SPACEMACS AND MAGIT
 
- That is all»
+   That is all»
 #+END_EXAMPLE
 
 * Contributions
