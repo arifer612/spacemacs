@@ -557,7 +557,7 @@ If you want to show your support financially, then you can contribute to
 
 If you used spacemacs in a project, and you want to show that fact, you
 can use the spacemacs badge:
-[[https://develop.spacemacs.org][[[https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg]]]]
+[[https://develop.spacemacs.org][https://cdn.rawgit.com/syl20bnr/spacemacs/442d025779da2f62fc86c2082703697714db6514/assets/spacemacs-badge.svg]]
 
 - For Markdown:
 
