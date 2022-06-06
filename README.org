@@ -165,7 +165,7 @@ case you should [[BuildFromSourceManual][build from source]] instead.
 *** macOS
 **** Install emacs
 ***** Using emacs-plus
-#+BEGIN_EXAMPLE brew
+#+BEGIN_EXAMPLE shell
 brew tap d12frosted/emacs-plus
 
 # to install Emacs 27
@@ -177,7 +177,7 @@ brew link emacs-plus
 #+END_EXAMPLE
 
 ***** Using emacs-mac
-#+BEGIN_EXAMPLE brew
+#+BEGIN_EXAMPLE shell
 brew tap railwaycat/emacsmacport
 brew install emacs-mac
 brew link emacs-mac
@@ -188,7 +188,7 @@ Homebrew now recommends to use the cask version with the following message:
 "Please try the Cask for a better-supported Cocoa version". To install the cask
 version:
 
-#+BEGIN_EXAMPLE
+#+BEGIN_EXAMPLE shell
 brew install --cask emacs
 #+END_EXAMPLE
 
@@ -202,13 +202,13 @@ down a few ways to install Emacs for macOS.
 Once Emacs is installed, run the following commands in the terminal to
 install the default Source Code Pro font:
 
-#+BEGIN_EXAMPLE
+#+BEGIN_EXAMPLE shell
 brew tap homebrew/cask-fonts
 brew install --cask font-source-code-pro
 #+END_EXAMPLE
 
 **** Install Spacemacs
-#+BEGIN_EXAMPLE
+#+BEGIN_EXAMPLE shell
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 #+END_EXAMPLE
 
@@ -226,7 +226,7 @@ be transferred using http, use at your own risk.
 You may also have some issues when searching for your projects. It is
 recommended to install the GNU [[RipgrepHomebrew][ripgrep]] through homebrew:
 
-#+BEGIN_EXAMPLE
+#+BEGIN_EXAMPLE shell
 brew install ripgrep
 #+END_EXAMPLE
 
@@ -244,13 +244,13 @@ By default, Emacs looks for the =.emacs.d= directory in:
 
   - Windows Command Prompt:
 
-#+BEGIN_EXAMPLE
+#+BEGIN_EXAMPLE shell
     git clone https://github.com/syl20bnr/spacemacs %appdata%/.emacs.d
 #+END_EXAMPLE
 
   - Windows PowerShell prompt:
 
-#+BEGIN_EXAMPLE
+#+BEGIN_EXAMPLE shell
     git clone https://github.com/syl20bnr/spacemacs $env:appdata/.emacs.d
 #+END_EXAMPLE
 
@@ -261,20 +261,20 @@ By default, Emacs looks for the =.emacs.d= directory in:
 
   - Windows Command Prompt:
 
-#+BEGIN_EXAMPLE
+#+BEGIN_EXAMPLE shell
     git clone https://github.com/syl20bnr/spacemacs %homepath%/.emacs.d
 #+END_EXAMPLE
 
   - Windows PowerShell prompt:
 
-#+BEGIN_EXAMPLE
+#+BEGIN_EXAMPLE powershell
     git clone https://github.com/syl20bnr/spacemacs $home/.emacs.d
 #+END_EXAMPLE
 
 **** Notes
 - If the following error occurs after starting Emacs:
 
-#+BEGIN_EXAMPLE
+#+BEGIN_EXAMPLE 
   The directory ~/.emacs.d/server is unsafe
 #+END_EXAMPLE
 
@@ -308,7 +308,7 @@ By default, Emacs looks for the =.emacs.d= directory in:
 1. If you have an existing Emacs configuration, back it up first by
    running the following code in your terminal:
 
-#+BEGIN_EXAMPLE
+#+BEGIN_EXAMPLE shell
    cd ~
    mv .emacs.d .emacs.d.bak
    mv .emacs .emacs.bak
@@ -322,13 +322,13 @@ By default, Emacs looks for the =.emacs.d= directory in:
 
    *Note: Windows users*, see [[*Install Spacemacs in Windows][Windows section]].
 
-#+BEGIN_EXAMPLE
+#+BEGIN_EXAMPLE shell
    git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 #+END_EXAMPLE
 
    Or in case you have a limited internet connection or speed,
 
-#+BEGIN_EXAMPLE
+#+BEGIN_EXAMPLE shell
    git clone --depth 1 https://github.com/syl20bnr/spacemacs ~/.emacs.d
 #+END_EXAMPLE
 
@@ -367,7 +367,7 @@ By default, Emacs looks for the =.emacs.d= directory in:
 regarding package downloads then you may try to disable the HTTPS
 protocol by starting Emacs with
 
-#+BEGIN_EXAMPLE
+#+BEGIN_EXAMPLE shell
 emacs --insecure
 #+END_EXAMPLE
 
