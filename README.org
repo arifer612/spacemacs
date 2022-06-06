@@ -45,19 +45,19 @@ your config. If you do have one, look at the [[#install][full installation instr
 other options.
 
 - Linux / MacOS:
-#+begin_example shell
+#+BEGIN_EXAMPLE shell
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-#+end_example
+#+END_EXAMPLE
 
 - Windows Command Prompt:
-#+begin_example shell
+#+BEGIN_EXAMPLE shell
   git clone https://github.com/syl20bnr/spacemacs %appdata%/.emacs.d
-#+end_example
+#+END_EXAMPLE
 
 - Windows PowerShell:
-#+begin_example powershell
+#+BEGIN_EXAMPLE powershell
   git clone https://github.com/syl20bnr/spacemacs $env:appdata/.emacs.d
-#+end_example
+#+END_EXAMPLE
 
 **** *Table of Contents*                               :TOC_5_gh:noexport:
 - [[#introduction][Introduction]]
@@ -99,7 +99,7 @@ input styles, makes Spacemacs a great tool for pair-programming.
 
 Spacemacs is currently in beta, and any contributions are very welcome.
 
-#+caption: spacemacs_python
+#+CAPTION: spacemacs_python
 [[file:doc/img/spacemacs-python.png]]
 
 * Features
@@ -165,7 +165,7 @@ case you should [[BuildFromSourceManual][build from source]] instead.
 *** macOS
 **** Install emacs
 ***** Using emacs-plus
-#+begin_example brew
+#+BEGIN_EXAMPLE brew
 brew tap d12frosted/emacs-plus
 
 # to install Emacs 27
@@ -174,23 +174,23 @@ brew install emacs-plus@27 --with-spacemacs-icon
 brew install emacs-plus@28 --with-spacemacs-icon
 
 brew link emacs-plus
-#+end_example
+#+END_EXAMPLE
 
 ***** Using emacs-mac
-#+begin_example brew
+#+BEGIN_EXAMPLE brew
 brew tap railwaycat/emacsmacport
 brew install emacs-mac
 brew link emacs-mac
-#+end_example
+#+END_EXAMPLE
 
 ***** Using cask
 Homebrew now recommends to use the cask version with the following message:
 "Please try the Cask for a better-supported Cocoa version". To install the cask
 version:
 
-#+begin_example
+#+BEGIN_EXAMPLE
 brew install --cask emacs
-#+end_example
+#+END_EXAMPLE
 
 This installs a pre-built package from https://emacsformacosx.com/
 
@@ -202,15 +202,15 @@ down a few ways to install Emacs for macOS.
 Once Emacs is installed, run the following commands in the terminal to
 install the default Source Code Pro font:
 
-#+begin_example
+#+BEGIN_EXAMPLE
 brew tap homebrew/cask-fonts
 brew install --cask font-source-code-pro
-#+end_example
+#+END_EXAMPLE
 
 **** Install Spacemacs
-#+begin_example
+#+BEGIN_EXAMPLE
 git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-#+end_example
+#+END_EXAMPLE
 
 *Notes:*
 
@@ -226,9 +226,9 @@ be transferred using http, use at your own risk.
 You may also have some issues when searching for your projects. It is
 recommended to install the GNU [[RipgrepHomebrew][ripgrep]] through homebrew:
 
-#+begin_example
+#+BEGIN_EXAMPLE
 brew install ripgrep
-#+end_example
+#+END_EXAMPLE
 
 *** Windows
 Download the official 64-bit (x86_64) stable builds from the [[WindowsInstallEmacs][GNU FTP]].
@@ -244,15 +244,15 @@ By default, Emacs looks for the =.emacs.d= directory in:
 
   - Windows Command Prompt:
 
-    #+begin_example
+#+BEGIN_EXAMPLE
     git clone https://github.com/syl20bnr/spacemacs %appdata%/.emacs.d
-    #+end_example
+#+END_EXAMPLE
 
   - Windows PowerShell prompt:
 
-    #+begin_example
+#+BEGIN_EXAMPLE
     git clone https://github.com/syl20bnr/spacemacs $env:appdata/.emacs.d
-    #+end_example
+#+END_EXAMPLE
 
 - Or if a =HOME= environment variable has been configured that points to
   your user directory: =C:\Users\<username>=
@@ -261,22 +261,22 @@ By default, Emacs looks for the =.emacs.d= directory in:
 
   - Windows Command Prompt:
 
-    #+begin_example
+#+BEGIN_EXAMPLE
     git clone https://github.com/syl20bnr/spacemacs %homepath%/.emacs.d
-    #+end_example
+#+END_EXAMPLE
 
   - Windows PowerShell prompt:
 
-    #+begin_example
+#+BEGIN_EXAMPLE
     git clone https://github.com/syl20bnr/spacemacs $home/.emacs.d
-    #+end_example
+#+END_EXAMPLE
 
 **** Notes
 - If the following error occurs after starting Emacs:
 
-  #+begin_example
+#+BEGIN_EXAMPLE
   The directory ~/.emacs.d/server is unsafe
-  #+end_example
+#+END_EXAMPLE
 
   Fix it by changing the owner of the directory =~/.emacs.d/server=:
 
@@ -308,11 +308,11 @@ By default, Emacs looks for the =.emacs.d= directory in:
 1. If you have an existing Emacs configuration, back it up first by
    running the following code in your terminal:
 
-   #+begin_example
+#+BEGIN_EXAMPLE
    cd ~
    mv .emacs.d .emacs.d.bak
    mv .emacs .emacs.bak
-   #+end_example
+#+END_EXAMPLE
 
    Don't forget to backup and /remove/ the =~/.emacs= file. Otherwise
    Spacemacs *WILL NOT* be able to load. This is because that file will
@@ -322,15 +322,15 @@ By default, Emacs looks for the =.emacs.d= directory in:
 
    *Note: Windows users*, see [[*Install Spacemacs in Windows][Windows section]].
 
-   #+begin_example
+#+BEGIN_EXAMPLE
    git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
-   #+end_example
+#+END_EXAMPLE
 
    Or in case you have a limited internet connection or speed,
 
-   #+begin_example
+#+BEGIN_EXAMPLE
    git clone --depth 1 https://github.com/syl20bnr/spacemacs ~/.emacs.d
-   #+end_example
+#+END_EXAMPLE
 
 3. (Optional) Install the default fonts
 
@@ -367,9 +367,9 @@ By default, Emacs looks for the =.emacs.d= directory in:
 regarding package downloads then you may try to disable the HTTPS
 protocol by starting Emacs with
 
-#+begin_example
+#+BEGIN_EXAMPLE
 emacs --insecure
-#+end_example
+#+END_EXAMPLE
 
 but this should be a last resort because of the security implications.
 
@@ -397,11 +397,11 @@ This solution is ideal for quickly trying Spacemacs without compromising
 your existing configuration. Clone Spacemacs outside the Emacs
 dotdirectory =~/.emacs.d= and modify the HOME environment variable.
 
-#+begin_example shell
+#+BEGIN_EXAMPLE shell
 mkdir ~/spacemacs
 git clone https://github.com/syl20bnr/spacemacs.git ~/spacemacs/.emacs.d
 HOME=~/spacemacs emacs
-#+end_example
+#+END_EXAMPLE
 
 *Note*: If you're using the Fish shell, then you'll need to modify the
 last command to: =env HOME=$HOME/spacemacs emacs=
@@ -411,10 +411,10 @@ This solution is better suited to "embed" Spacemacs into your own
 configuration. If you've cloned Spacemacs into =~/.emacs.d/spacemacs/=,
 then drop the following lines in the =~/.emacs.d/init.el= file:
 
-#+begin_example elisp
+#+BEGIN_EXAMPLE elisp
 (setq spacemacs-start-directory "~/.emacs.d/spacemacs/")
 (load-file (concat spacemacs-start-directory "init.el"))
-#+end_example
+#+END_EXAMPLE
 
 ** Spacemacs logo
 For Linux users, create =spacemacs.desktop= in =~/.local/share/applications/=
