@@ -1,0 +1,54 @@
+#+TITLE: Spacemacs
+
+#+LINK: spacemacs-convention https://develop.spacemacs.org/doc/CONVENTIONS
+
+*Quick Install*
+
+This assumes you don't have an existing Emacs setup and want to run Spacemacs as
+your config. If you do have one, look at the [[#install][full installation instructions]] for
+other options.
+
+#+begin_example shell
+git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+#+end_example
+
+- Windows Command Prompt:
+#+begin_example shell
+  git clone https://github.com/syl20bnr/spacemacs %appdata%/.emacs.d
+#+end_example
+
+- Windows PowerShell:
+#+begin_example powershell
+  git clone https://github.com/syl20bnr/spacemacs $env:appdata/.emacs.d
+#+end_example
+
+* Introduction
+Spacemacs is a new way of experiencing Emacs -- it's a sophisticated and
+polished set-up, focused on ergonomics, mnemonics and consistency.
+
+Just clone and launch it, then press the space bar to explore the
+interactive list of carefully-chosen key bindings. You can also press
+the home buffer's =[?]= button for some great first key bindings to try.
+
+Spacemacs can be used naturally by both Emacs and Vim users -- you can
+even mix the two editing styles. Being able to quickly switch between
+input styles, makes Spacemacs a great tool for pair-programming.
+
+Spacemacs is currently in beta, and any contributions are very welcome.
+
+#+caption: spacemacs_python
+[[file:doc/img/spacemacs-python.png]]
+
+* Features
+- *Great documentation:* access the Spacemacs documentation with SPC h
+  SPC.
+- *Beautiful GUI:* you'll love the distraction free UI and its
+  functional mode-line.
+- *Excellent ergonomics:* all the key bindings are accessible by
+  pressing the space bar or alt-m.
+- *Mnemonic key bindings:* commands have mnemonic prefixes like SPC b
+  for all the buffer commands or SPC p for the project commands.
+- *Batteries included:* discover hundreds of ready-to-use packages
+  nicely organised in configuration layers following a set of
+  [[spacemacs-conventions][conventions]].
+
